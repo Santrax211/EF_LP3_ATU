@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ATU_EF</title>
+    <link href="https://fonts.cdnfonts.com/css/gt-america-trial" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Insertar el logo de la UNTELS aquí -->
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'integrantes' %}">Integrantes</a></li>
+                <li><a href="{% url 'crear_productos' %}">Crear Productos</a></li>
+                <li><a href="{% url 'crear_cursos' %}">Crear Cursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer__column">
+                <h3>Integrantes</h3>
+                <a href="#">Talledo</a>
+                <a href="#">Urbisagastegui</a>
+                <a href="#">Ayquipa</a>
+            </div>
+            <div class="footer__column">
+                <h3>Profesora</h3>
+                <a href="#">Flor Cerdan</a>
+            </div>
+    </footer>
+    
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+</body>
+</html>
